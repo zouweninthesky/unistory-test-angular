@@ -11,7 +11,14 @@ import { DeleteModalComponent } from './delete-modal/delete-modal.component';
 import { ArticleEditComponent } from './article-edit/article-edit.component';
 
 @NgModule({
-  declarations: [AppComponent, ArticleTileComponent, BlogComponent, ArticleComponent, DeleteModalComponent, ArticleEditComponent],
+  declarations: [
+    AppComponent,
+    ArticleTileComponent,
+    BlogComponent,
+    ArticleComponent,
+    DeleteModalComponent,
+    ArticleEditComponent,
+  ],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [],
   bootstrap: [AppComponent],
