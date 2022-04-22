@@ -1,26 +1,23 @@
-import { Component } from '@angular/core';
-import { Article } from '../app.component';
+import { Component, Input, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { Article } from '../../data/articles';
+import { ArticlesService } from '../articles.service';
 
 @Component({
   selector: 'app-blog',
   templateUrl: './blog.component.html',
-  styleUrls: [],
+  styleUrls: ['./blog.component.scss'],
 })
-export class BlogComponent {
-  currentArticle: Article | undefined;
+export class BlogComponent implements OnInit {
+  articles = this.articlesService.getItems();
+  constructor(
+    // private route: ActivatedRoute,
+    private articlesService: ArticlesService
+  ) {}
 
-  articles: Article[] = [
-    { id: 222, title: 'Breaking news', content: 'waow' },
-    {
-      id: 224,
-      title: 'Second article',
-      content:
-        'enormous content enormous content enormous content enormous contentenormous content enormous content enormous content',
-    },
-    { id: 226, title: 'Third article', content: 'test' },
-  ];
-
-  chooseArticle(id: number) {
-    this.currentArticle = this.articles.find((a) => a.id === id);
+  ngOnInit(): void {
+    // this.route.data.subscribe((data) => {
+    //   this.articles = data['articles'];
+    // });
   }
 }

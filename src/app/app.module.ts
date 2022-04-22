@@ -6,9 +6,10 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ArticleTileComponent } from './article-tile/article-tile.component';
 import { BlogComponent } from './blog/blog.component';
+import { ArticleComponent } from './article/article.component';
 
 @NgModule({
-  declarations: [AppComponent, ArticleTileComponent, BlogComponent],
+  declarations: [AppComponent, ArticleTileComponent, BlogComponent, ArticleComponent],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [],
   bootstrap: [AppComponent],

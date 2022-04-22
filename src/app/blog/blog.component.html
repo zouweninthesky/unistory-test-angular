@@ -1,14 +1,11 @@
-<section>
-  <h2>Блог</h2>
-  <p>{{ currentArticle ? currentArticle.title : "" }}</p>
-  <button>toggle tiles</button>
-  <div>
+<section class="blog">
+  <h2 class="blog__header">Блог</h2>
+  <ul class="blog__list">
     <app-article-tile
       *ngFor="let article of articles"
       [article]="article"
-      (articleChosenEvent)="chooseArticle($event)"
     ></app-article-tile>
-  </div>
+  </ul>
   <ng-template #noTiles>
     <p>tiles are hidden</p>
   </ng-template>

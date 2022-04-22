@@ -1,14 +1,18 @@
 import { Component } from '@angular/core';
 
-export interface Article {
-  id: number;
-  title: string;
-  content: string;
-}
+import articles, { Article } from 'src/data/articles';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
 })
-export class AppComponent {}
+export class AppComponent {
+  currentArticle: Article | undefined;
+
+  articles = articles;
+
+  chooseArticle(id: number) {
+    this.currentArticle = this.articles.find((a) => a.id === id);
+  }
+}

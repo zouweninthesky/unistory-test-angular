@@ -1,0 +1,15 @@
+.blog {
+  &__header {
+    text-align: center;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    padding-left: 0;
+    list-style: none;
+  }
+}
