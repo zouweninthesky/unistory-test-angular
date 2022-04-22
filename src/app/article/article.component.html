@@ -1,1 +1,28 @@
-<p>article works!</p>
+<section>
+  <a routerLink="/">Назад</a>
+
+  <div *ngIf="article; else noArticle">
+    <h2>Запись {{ article!.title }}</h2>
+    <div>
+      <input type="text" value="{{ article!.title }}" />
+      <textarea
+        name=""
+        id=""
+        cols="30"
+        rows="10"
+        value="{{ article!.content }}"
+      ></textarea>
+    </div>
+    <button type="button" (click)="onDelete()">Удалить запись</button>
+  </div>
+
+  <ng-template #noArticle>
+    <p>Такой статьи не существует</p>
+  </ng-template>
+
+  <app-delete-modal
+    *ngIf="deleteAttempted"
+    [id]="article!.id"
+    (deleteCanceledEvent)="onDeleteCancel()"
+  ></app-delete-modal>
+</section>

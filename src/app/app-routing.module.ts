@@ -4,7 +4,7 @@ import { BlogComponent } from './blog/blog.component';
 import { ArticleComponent } from './article/article.component';
 
 const routes: Routes = [
-  { path: 'article', component: ArticleComponent },
+  { path: 'article/:articleId', component: ArticleComponent },
   {
     path: '',
     component: BlogComponent,

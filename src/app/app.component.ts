@@ -7,12 +7,4 @@ import articles, { Article } from 'src/data/articles';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
 })
-export class AppComponent {
-  currentArticle: Article | undefined;
-
-  articles = articles;
-
-  chooseArticle(id: number) {
-    this.currentArticle = this.articles.find((a) => a.id === id);
-  }
-}
+export class AppComponent {}

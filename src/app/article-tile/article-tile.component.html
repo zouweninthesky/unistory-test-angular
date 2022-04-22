@@ -3,5 +3,5 @@
   <div>
     <p>{{ article.content }}</p>
   </div>
-  <button type="button">Перейти</button>
+  <a [routerLink]="['/article', article.id]">Перейти</a>
 </li>

@@ -1,7 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Article } from '../../data/articles';
-import { ArticlesService } from '../articles.service';
+import { ArticlesService } from '../services/articles-service/articles.service';
 
 @Component({
   selector: 'app-blog',
@@ -9,7 +9,7 @@ import { ArticlesService } from '../articles.service';
   styleUrls: ['./blog.component.scss'],
 })
 export class BlogComponent implements OnInit {
-  articles = this.articlesService.getItems();
+  articles = this.articlesService.getArticles();
   constructor(
     // private route: ActivatedRoute,
     private articlesService: ArticlesService

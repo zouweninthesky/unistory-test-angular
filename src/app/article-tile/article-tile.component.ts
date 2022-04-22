@@ -8,9 +8,4 @@ import { Article } from '../../data/articles';
 })
 export class ArticleTileComponent {
   @Input() article: Article = { id: 0, title: '', content: '' };
-  // @Output() articleChosenEvent = new EventEmitter<number>();
-
-  // chooseArticle(id: number) {
-  //   this.articleChosenEvent.emit(id);
-  // }
 }

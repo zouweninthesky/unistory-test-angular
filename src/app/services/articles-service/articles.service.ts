@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import articles, { Article } from '../data/articles';
+import articles, { Article } from '../../../data/articles';
 
 @Injectable({
   providedIn: 'root',
@@ -7,8 +7,12 @@ import articles, { Article } from '../data/articles';
 export class ArticlesService {
   articles: Article[] = [...articles];
 
-  getItems() {
+  getArticles() {
     return this.articles;
+  }
+
+  deleteArticle(id: number) {
+    this.articles = this.articles.filter((a) => a.id !== id);
   }
 
   // constructor() {}
