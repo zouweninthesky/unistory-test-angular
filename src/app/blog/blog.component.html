@@ -6,7 +6,12 @@
       [article]="article"
     ></app-article-tile>
   </ul>
-  <ng-template #noTiles>
-    <p>tiles are hidden</p>
+  <ng-template #noArticles>
+    <p>Статей пока нет</p>
   </ng-template>
+  <button type="button" (click)="onCreate()">Создать статью</button>
+  <app-article-create-modal
+    *ngIf="createModalOpened"
+    (createCanceledEvent)="onCreateCanceled()"
+  ></app-article-create-modal>
 </section>

@@ -9,6 +9,7 @@ import { BlogComponent } from './blog/blog.component';
 import { ArticleComponent } from './article/article.component';
 import { DeleteModalComponent } from './delete-modal/delete-modal.component';
 import { ArticleEditComponent } from './article-edit/article-edit.component';
+import { ArticleCreateModalComponent } from './article-create-modal/article-create-modal.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { ArticleEditComponent } from './article-edit/article-edit.component';
     ArticleComponent,
     DeleteModalComponent,
     ArticleEditComponent,
+    ArticleCreateModalComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [],

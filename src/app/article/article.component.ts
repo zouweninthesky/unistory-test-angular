@@ -11,7 +11,7 @@ import { ArticlesService } from '../services/articles-service/articles.service';
 })
 export class ArticleComponent implements OnInit {
   article: Article | undefined;
-  deleteAttempted: boolean = false;
+  deleteModalOpened: boolean = false;
 
   constructor(
     private articlesService: ArticlesService,
@@ -26,10 +26,10 @@ export class ArticleComponent implements OnInit {
   }
 
   onDelete() {
-    this.deleteAttempted = true;
+    this.deleteModalOpened = true;
   }
 
   onDeleteCancel() {
-    this.deleteAttempted = false;
+    this.deleteModalOpened = false;
   }
 }

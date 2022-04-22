@@ -12,7 +12,7 @@
   </ng-template>
 
   <app-delete-modal
-    *ngIf="deleteAttempted"
+    *ngIf="deleteModalOpened"
     [id]="article!.id"
     (deleteCanceledEvent)="onDeleteCancel()"
   ></app-delete-modal>

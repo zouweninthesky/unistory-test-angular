@@ -10,10 +10,20 @@ import { ArticlesService } from '../services/articles-service/articles.service';
 })
 export class BlogComponent implements OnInit {
   articles = this.articlesService.getArticles();
+  createModalOpened: boolean = false;
+
   constructor(
     // private route: ActivatedRoute,
     private articlesService: ArticlesService
   ) {}
+
+  onCreate() {
+    this.createModalOpened = true;
+  }
+
+  onCreateCanceled() {
+    this.createModalOpened = false;
+  }
 
   ngOnInit(): void {
     // this.route.data.subscribe((data) => {
