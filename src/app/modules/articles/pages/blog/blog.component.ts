@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ModalService } from '../../../modal/services/modal.service';
-import { ArticlesService } from '../../services/articles-service/articles.service';
+import { ArticlesService } from '../../services/articles.service';
 import ModalIds from '../../../modal/utils/modals-id';
 
 @Component({

@@ -1,7 +1,7 @@
 import { Component, Output, Input, EventEmitter } from '@angular/core';
 import { Router } from '@angular/router';
 import { ModalService } from 'src/app/modules/modal/services/modal.service';
-import { ArticlesService } from '../../services/articles-service/articles.service';
+import { ArticlesService } from '../../services/articles.service';
 
 import ModalIds from 'src/app/modules/modal/utils/modals-id';
 

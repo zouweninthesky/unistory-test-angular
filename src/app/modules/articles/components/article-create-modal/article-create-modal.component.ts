@@ -1,6 +1,6 @@
 import { Component, Output, EventEmitter } from '@angular/core';
 import { ModalService } from 'src/app/modules/modal/services/modal.service';
-import { ArticlesService } from '../../services/articles-service/articles.service';
+import { ArticlesService } from '../../services/articles.service';
 
 import ModalIds from 'src/app/modules/modal/utils/modals-id';
 

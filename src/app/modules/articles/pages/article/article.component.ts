@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 import { ModalService } from 'src/app/modules/modal/services/modal.service';
 import ModalIds from 'src/app/modules/modal/utils/modals-id';
-import { ArticlesService } from 'src/app/modules/articles/services/articles-service/articles.service';
+import { ArticlesService } from 'src/app/modules/articles/services/articles.service';
 
 import { Article } from 'src/data/articles';
 

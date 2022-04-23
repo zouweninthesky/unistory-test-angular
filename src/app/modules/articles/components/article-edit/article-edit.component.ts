@@ -3,7 +3,7 @@ import { Article } from 'src/data/articles';
 import { Router } from '@angular/router';
 
 import { ModalService } from 'src/app/modules/modal/services/modal.service';
-import { ArticlesService } from '../../services/articles-service/articles.service';
+import { ArticlesService } from '../../services/articles.service';
 
 import ModalIds from 'src/app/modules/modal/utils/modals-id';
 

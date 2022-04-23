@@ -3,7 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 
-import { ArticlesService } from './services/articles-service/articles.service';
+import { ArticlesService } from './services/articles.service';
 import { ArticleCreateModalComponent } from './components/article-create-modal/article-create-modal.component';
 import { ArticleEditComponent } from './components/article-edit/article-edit.component';
 import { ArticleTileComponent } from './components/article-tile/article-tile.component';
