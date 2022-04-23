@@ -1,15 +1,17 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import { ModalService } from '../../services/modal-serice/modal.service';
+
+import ModalIds from 'src/app/services/modal-serice/modals-id';
 
 @Component({
   selector: 'app-modal',
   templateUrl: './modal.component.html',
-  styleUrls: ['./modal.component.scss']
+  styleUrls: ['./modal.component.scss'],
 })
-export class ModalComponent implements OnInit {
+export class ModalComponent {
+  constructor(private modalService: ModalService) {}
 
-  constructor() { }
-
-  ngOnInit(): void {
+  onClose() {
+    this.modalService.setModalId(ModalIds.NONE);
   }
-
 }

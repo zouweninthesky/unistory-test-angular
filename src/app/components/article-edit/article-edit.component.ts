@@ -3,6 +3,8 @@ import { Article } from 'src/data/articles';
 import { Router } from '@angular/router';
 
 import { ArticlesService } from '../../services/articles-service/articles.service';
+import { ModalService } from 'src/app/services/modal-serice/modal.service';
+import ModalIds from 'src/app/services/modal-serice/modals-id';
 
 @Component({
   selector: 'app-article-edit',
@@ -13,10 +15,10 @@ export class ArticleEditComponent implements OnInit {
   @Input() article: Article | undefined;
   title: string = '';
   content: string = '';
-  deleteModalOpened: boolean = false;
 
   constructor(
     private articlesService: ArticlesService,
+    private modalService: ModalService,
     private router: Router
   ) {}
 
@@ -36,10 +38,6 @@ export class ArticleEditComponent implements OnInit {
   }
 
   onDelete() {
-    this.deleteModalOpened = true;
-  }
-
-  onDeleteCancel() {
-    this.deleteModalOpened = false;
+    this.modalService.setModalId(ModalIds.DELETE);
   }
 }

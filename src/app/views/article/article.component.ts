@@ -1,8 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
+import { ModalService } from 'src/app/services/modal-serice/modal.service';
 
 import { Article } from 'src/data/articles';
 import { ArticlesService } from '../../services/articles-service/articles.service';
+import ModalIds from 'src/app/services/modal-serice/modals-id';
 
 @Component({
   selector: 'app-article',
@@ -11,9 +13,13 @@ import { ArticlesService } from '../../services/articles-service/articles.servic
 })
 export class ArticleComponent implements OnInit {
   article: Article | undefined;
+  get deleteModalOpened(): boolean {
+    return this.modalService.getModalId() === ModalIds.DELETE;
+  }
 
   constructor(
     private articlesService: ArticlesService,
+    private modalService: ModalService,
     private route: ActivatedRoute
   ) {}
 

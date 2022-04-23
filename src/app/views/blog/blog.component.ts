@@ -1,7 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
-import { Article } from '../../../data/articles';
+import { ModalService } from 'src/app/services/modal-serice/modal.service';
 import { ArticlesService } from '../../services/articles-service/articles.service';
+import ModalIds from 'src/app/services/modal-serice/modals-id';
 
 @Component({
   selector: 'app-blog',
@@ -10,24 +10,18 @@ import { ArticlesService } from '../../services/articles-service/articles.servic
 })
 export class BlogComponent implements OnInit {
   articles = this.articlesService.getArticles();
-  createModalOpened: boolean = false;
+  get createModalOpened(): boolean {
+    return this.modalService.getModalId() === ModalIds.CREATE;
+  }
 
   constructor(
-    // private route: ActivatedRoute,
-    private articlesService: ArticlesService
+    private articlesService: ArticlesService,
+    private modalService: ModalService
   ) {}
 
   onCreate() {
-    this.createModalOpened = true;
+    this.modalService.setModalId(ModalIds.CREATE);
   }
 
-  onCreateCanceled() {
-    this.createModalOpened = false;
-  }
-
-  ngOnInit(): void {
-    // this.route.data.subscribe((data) => {
-    //   this.articles = data['articles'];
-    // });
-  }
+  ngOnInit(): void {}
 }

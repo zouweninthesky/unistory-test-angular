@@ -1,15 +1,26 @@
-<div>
+<app-modal>
   <h2>Создание новой статьи</h2>
   <div>
-    <input type="text" [(ngModel)]="title" />
-    <textarea
-      name=""
-      id=""
-      cols="30"
-      rows="10"
-      [(ngModel)]="content"
-    ></textarea>
-    <button class="button" type="button" (click)="onCancel()">Отменить</button>
-    <button class="button" type="button" (click)="onSave()">Сохранить</button>
+    <div class="input">
+      <label for="title">Название</label>
+      <input id="title" type="text" [(ngModel)]="title" />
+    </div>
+    <div class="input">
+      <label for="content">Содержимое</label>
+      <textarea
+        name=""
+        id="content"
+        cols="30"
+        rows="10"
+        [(ngModel)]="content"
+      ></textarea>
+    </div>
+
+    <div class="buttons-wrapper">
+      <button class="button" type="button" (click)="onCancel()">
+        Отменить
+      </button>
+      <button class="button" type="button" (click)="onSave()">Сохранить</button>
+    </div>
   </div>
-</div>
+</app-modal>

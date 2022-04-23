@@ -7,6 +7,11 @@
     <app-article-edit [article]="article"></app-article-edit>
   </div>
 
+  <app-delete-modal
+    *ngIf="deleteModalOpened"
+    [id]="article!.id"
+  ></app-delete-modal>
+
   <ng-template #noArticle>
     <p>Такой статьи не существует</p>
   </ng-template>

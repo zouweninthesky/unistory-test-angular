@@ -1,6 +1,9 @@
 import { Component, Output, Input, EventEmitter } from '@angular/core';
 import { Router } from '@angular/router';
+import { ModalService } from 'src/app/services/modal-serice/modal.service';
 import { ArticlesService } from '../../services/articles-service/articles.service';
+
+import ModalIds from 'src/app/services/modal-serice/modals-id';
 
 @Component({
   selector: 'app-delete-modal',
@@ -13,15 +16,17 @@ export class DeleteModalComponent {
 
   constructor(
     private articlesService: ArticlesService,
+    private modalService: ModalService,
     private router: Router
   ) {}
 
   onDelete() {
     this.articlesService.deleteArticle(this.id);
+    this.modalService.setModalId(ModalIds.NONE);
     this.router.navigate(['/']);
   }
 
   onCancel() {
-    this.deleteCanceledEvent.emit();
+    this.modalService.setModalId(ModalIds.NONE);
   }
 }

@@ -14,14 +14,9 @@
         [(ngModel)]="content"
       ></textarea>
     </div>
-    <div class="article-edit__button-wrapper">
+    <div class="buttons-wrapper">
       <button class="button" type="button" (click)="onDelete()">Удалить</button>
       <button class="button" type="button" (click)="onSave()">Сохранить</button>
     </div>
   </div>
-  <app-delete-modal
-    *ngIf="deleteModalOpened"
-    [id]="article!.id"
-    (deleteCanceledEvent)="onDeleteCancel()"
-  ></app-delete-modal>
 </div>
