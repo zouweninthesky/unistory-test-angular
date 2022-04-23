@@ -1,9 +1,11 @@
 import { Component, OnInit } from '@angular/core';
-import { Router, ActivatedRoute } from '@angular/router';
+import { ActivatedRoute } from '@angular/router';
+import { Title } from '@angular/platform-browser';
+
 import { ModalService } from 'src/app/modules/modal/services/modal.service';
-import ModalIds from 'src/app/modules/modal/utils/modals-id';
 import { ArticlesService } from 'src/app/modules/articles/services/articles.service';
 
+import ModalIds from 'src/app/modules/modal/utils/modals-id';
 import { Article } from 'src/data/articles';
 
 @Component({
@@ -20,7 +22,8 @@ export class ArticleComponent implements OnInit {
   constructor(
     private articlesService: ArticlesService,
     private modalService: ModalService,
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
+    private titleService: Title
   ) {}
 
   ngOnInit() {
@@ -28,5 +31,6 @@ export class ArticleComponent implements OnInit {
     const articles = this.articlesService.getArticles();
 
     this.article = articles.find((a) => a.id === articleId);
+    if (this.article) this.titleService.setTitle(this.article.title);
   }
 }

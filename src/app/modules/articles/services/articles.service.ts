@@ -2,8 +2,10 @@ import { Injectable } from '@angular/core';
 import articles, { Article } from '../../../../data/articles';
 
 @Injectable({
-  providedIn: 'root',
+  providedIn: 'any',
 })
+
+// Сервис для получения, удаления, изменения и создания "статей"
 export class ArticlesService {
   articles: Article[] = [...articles];
 

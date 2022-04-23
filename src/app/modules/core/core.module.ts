@@ -9,4 +9,4 @@ import { ErrorPageComponent } from './pages/error-page/error-page.component';
   exports: [ErrorPageComponent],
   providers: [],
 })
-export class ModalModule {}
+export class CoreModule {}

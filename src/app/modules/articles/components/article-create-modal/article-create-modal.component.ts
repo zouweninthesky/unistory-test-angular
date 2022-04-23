@@ -1,4 +1,5 @@
 import { Component, Output, EventEmitter } from '@angular/core';
+
 import { ModalService } from 'src/app/modules/modal/services/modal.service';
 import { ArticlesService } from '../../services/articles.service';
 
@@ -9,7 +10,6 @@ import ModalIds from 'src/app/modules/modal/utils/modals-id';
   templateUrl: './article-create-modal.component.html',
 })
 export class ArticleCreateModalComponent {
-  @Output() createCanceledEvent = new EventEmitter();
   title: string = '';
   content: string = '';
 

@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+import { Title } from '@angular/platform-browser';
+
 import { ModalService } from '../../../modal/services/modal.service';
 import { ArticlesService } from '../../services/articles.service';
+
 import ModalIds from '../../../modal/utils/modals-id';
 
 @Component({
@@ -16,12 +19,15 @@ export class BlogComponent implements OnInit {
 
   constructor(
     private articlesService: ArticlesService,
-    private modalService: ModalService
+    private modalService: ModalService,
+    private titleService: Title
   ) {}
 
   onCreate() {
     this.modalService.setModalId(ModalIds.CREATE);
   }
 
-  ngOnInit(): void {}
+  ngOnInit() {
+    this.titleService.setTitle('Блог');
+  }
 }
