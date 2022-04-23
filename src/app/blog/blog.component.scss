@@ -6,10 +6,20 @@
   &__list {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    flex-wrap: wrap;
+    justify-content: flex-start;
     align-items: flex-start;
 
     padding-left: 0;
     list-style: none;
+  }
+
+  & app-article-tile {
+    width: 30%;
+    margin-right: 5%;
+
+    &:nth-child(3n) {
+      margin-right: 0;
+    }
   }
 }

@@ -5,14 +5,18 @@ export interface Article {
 }
 
 const articles: Article[] = [
-  { id: 222, title: 'Breaking news', content: 'waow' },
+  {
+    id: 222,
+    title: 'Первая статья',
+    content: 'Содержимое отличается умом и сообразительностью',
+  },
   {
     id: 224,
-    title: 'Second article',
+    title: 'Очень длинный заголовок, что же делать?',
     content:
-      'enormous content enormous content enormous content enormous contentenormous content enormous content enormous content',
+      'А содержимое и того длиннее А содержимое и того длиннее А содержимое и того длиннее А содержимое и того длиннее А содержимое и того длиннее А содержимое и того длиннее А содержимое и того длиннее А содержимое и того длиннее',
   },
-  { id: 226, title: 'Third article', content: 'test' },
+  { id: 226, title: 'Третий', content: 'Обыкновенное содержание' },
 ];
 
 export default articles;

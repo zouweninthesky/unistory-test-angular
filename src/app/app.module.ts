@@ -10,6 +10,7 @@ import { ArticleComponent } from './article/article.component';
 import { DeleteModalComponent } from './delete-modal/delete-modal.component';
 import { ArticleEditComponent } from './article-edit/article-edit.component';
 import { ArticleCreateModalComponent } from './article-create-modal/article-create-modal.component';
+import { ErrorPageComponent } from './error-page/error-page.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { ArticleCreateModalComponent } from './article-create-modal/article-crea
     DeleteModalComponent,
     ArticleEditComponent,
     ArticleCreateModalComponent,
+    ErrorPageComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [],
