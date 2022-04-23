@@ -8,7 +8,6 @@ import ModalIds from 'src/app/services/modal-serice/modals-id';
 @Component({
   selector: 'app-delete-modal',
   templateUrl: './delete-modal.component.html',
-  styleUrls: ['./delete-modal.component.scss'],
 })
 export class DeleteModalComponent {
   @Input() id: number = 0;

@@ -7,7 +7,6 @@ import ModalIds from 'src/app/services/modal-serice/modals-id';
 @Component({
   selector: 'app-article-create-modal',
   templateUrl: './article-create-modal.component.html',
-  styleUrls: ['./article-create-modal.component.scss'],
 })
 export class ArticleCreateModalComponent {
   @Output() createCanceledEvent = new EventEmitter();

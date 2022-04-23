@@ -9,7 +9,6 @@ import ModalIds from 'src/app/services/modal-serice/modals-id';
 @Component({
   selector: 'app-article-edit',
   templateUrl: './article-edit.component.html',
-  styleUrls: ['./article-edit.component.scss'],
 })
 export class ArticleEditComponent implements OnInit {
   @Input() article: Article | undefined;
