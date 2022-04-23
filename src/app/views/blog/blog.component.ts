@@ -1,7 +1,7 @@
-import { Component, Input, OnInit } from '@angular/core';
-import { ModalService } from 'src/app/services/modal-serice/modal.service';
-import { ArticlesService } from '../../services/articles-service/articles.service';
-import ModalIds from 'src/app/services/modal-serice/modals-id';
+import { Component, OnInit } from '@angular/core';
+import { ModalService } from '../../modules/modal/services/modal.service';
+import { ArticlesService } from '../../modules/articles/services/articles-service/articles.service';
+import ModalIds from '../../modules/modal/utils/modals-id';
 
 @Component({
   selector: 'app-blog',

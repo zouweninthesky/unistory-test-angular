@@ -1,8 +1,9 @@
 import { Injectable } from '@angular/core';
 import { Subject } from 'rxjs';
+import { ModalModule } from '../modal.module';
 
 @Injectable({
-  providedIn: 'root',
+  providedIn: 'any',
 })
 export class ModalService {
   modalId = '';

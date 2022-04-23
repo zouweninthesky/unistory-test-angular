@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
-import { ModalService } from '../../services/modal-serice/modal.service';
+import { ModalService } from './services/modal.service';
 
-import ModalIds from 'src/app/services/modal-serice/modals-id';
+import ModalIds from './utils/modals-id';
 
 @Component({
   selector: 'app-modal',

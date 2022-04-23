@@ -1,8 +1,8 @@
 import { Component, Output, EventEmitter } from '@angular/core';
-import { ModalService } from 'src/app/services/modal-serice/modal.service';
+import { ModalService } from 'src/app/modules/modal/services/modal.service';
 import { ArticlesService } from '../../services/articles-service/articles.service';
 
-import ModalIds from 'src/app/services/modal-serice/modals-id';
+import ModalIds from 'src/app/modules/modal/utils/modals-id';
 
 @Component({
   selector: 'app-article-create-modal',

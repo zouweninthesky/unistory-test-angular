@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import articles, { Article } from '../../../data/articles';
+import articles, { Article } from '../../../../../data/articles';
 
 @Injectable({
   providedIn: 'root',

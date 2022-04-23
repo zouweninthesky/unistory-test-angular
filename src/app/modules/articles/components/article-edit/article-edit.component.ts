@@ -2,9 +2,10 @@ import { Component, Input, OnInit } from '@angular/core';
 import { Article } from 'src/data/articles';
 import { Router } from '@angular/router';
 
+import { ModalService } from 'src/app/modules/modal/services/modal.service';
 import { ArticlesService } from '../../services/articles-service/articles.service';
-import { ModalService } from 'src/app/services/modal-serice/modal.service';
-import ModalIds from 'src/app/services/modal-serice/modals-id';
+
+import ModalIds from 'src/app/modules/modal/utils/modals-id';
 
 @Component({
   selector: 'app-article-edit',
