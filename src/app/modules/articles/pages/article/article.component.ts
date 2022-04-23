@@ -15,6 +15,7 @@ import { Article } from 'src/data/articles';
 })
 export class ArticleComponent implements OnInit {
   article: Article | undefined;
+  isModified: boolean = false;
   get deleteModalOpened(): boolean {
     return this.modalService.getModalId() === ModalIds.DELETE;
   }
@@ -32,5 +33,10 @@ export class ArticleComponent implements OnInit {
 
     this.article = articles.find((a) => a.id === articleId);
     if (this.article) this.titleService.setTitle(this.article.title);
+  }
+
+  onModified(isModified: boolean) {
+    if (isModified) this.isModified = true;
+    else this.isModified = false;
   }
 }

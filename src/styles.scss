@@ -42,6 +42,13 @@ a {
   background-color: peachpuff;
   border: 1px solid gray;
   border-radius: 4px;
+
+  cursor: pointer;
+
+  &:disabled {
+    opacity: 0.6;
+    cursor: auto;
+  }
 }
 
 .input {

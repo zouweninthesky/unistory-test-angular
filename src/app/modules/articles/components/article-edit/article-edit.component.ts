@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, Output, EventEmitter, OnInit } from '@angular/core';
 import { Article } from 'src/data/articles';
 import { Router } from '@angular/router';
 
@@ -13,8 +13,11 @@ import ModalIds from 'src/app/modules/modal/utils/modals-id';
 })
 export class ArticleEditComponent implements OnInit {
   @Input() article: Article | undefined;
+  @Output() isModifiedEvent = new EventEmitter<boolean>();
+
   title: string = '';
   content: string = '';
+  isModified: boolean = false;
 
   constructor(
     private articlesService: ArticlesService,
@@ -25,6 +28,19 @@ export class ArticleEditComponent implements OnInit {
   ngOnInit(): void {
     this.title = this.article!.title;
     this.content = this.article!.content;
+  }
+
+  onChange() {
+    if (
+      this.title !== this.article!.title ||
+      this.content !== this.article!.content
+    ) {
+      this.isModified = true;
+      this.isModifiedEvent.emit(true);
+    } else {
+      this.isModified = false;
+      this.isModifiedEvent.emit(false);
+    }
   }
 
   onSave() {

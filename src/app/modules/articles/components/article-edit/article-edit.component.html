@@ -12,11 +12,19 @@
         cols="30"
         rows="10"
         [(ngModel)]="content"
+        (ngModelChange)="onChange()"
       ></textarea>
     </div>
     <div class="buttons-wrapper">
       <button class="button" type="button" (click)="onDelete()">Удалить</button>
-      <button class="button" type="button" (click)="onSave()">Сохранить</button>
+      <button
+        class="button"
+        type="button"
+        [disabled]="!isModified"
+        (click)="onSave()"
+      >
+        Сохранить
+      </button>
     </div>
   </div>
 </div>
