@@ -47,4 +47,11 @@
   &__close {
     align-self: flex-end;
   }
+
+  @media (max-width: 660px) {
+    &__content {
+      width: 100%;
+      height: 100%;
+    }
+  }
 }
