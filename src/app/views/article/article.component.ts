@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 
 import { Article } from 'src/data/articles';
-import { ArticlesService } from '../services/articles-service/articles.service';
+import { ArticlesService } from '../../services/articles-service/articles.service';
 
 @Component({
   selector: 'app-article',
@@ -11,7 +11,6 @@ import { ArticlesService } from '../services/articles-service/articles.service';
 })
 export class ArticleComponent implements OnInit {
   article: Article | undefined;
-  deleteModalOpened: boolean = false;
 
   constructor(
     private articlesService: ArticlesService,
@@ -23,13 +22,5 @@ export class ArticleComponent implements OnInit {
     const articles = this.articlesService.getArticles();
 
     this.article = articles.find((a) => a.id === articleId);
-  }
-
-  onDelete() {
-    this.deleteModalOpened = true;
-  }
-
-  onDeleteCancel() {
-    this.deleteModalOpened = false;
   }
 }

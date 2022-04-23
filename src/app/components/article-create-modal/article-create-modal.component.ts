@@ -1,5 +1,5 @@
 import { Component, Output, EventEmitter } from '@angular/core';
-import { ArticlesService } from '../services/articles-service/articles.service';
+import { ArticlesService } from '../../services/articles-service/articles.service';
 
 @Component({
   selector: 'app-article-create-modal',

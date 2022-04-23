@@ -9,7 +9,9 @@
   <ng-template #noArticles>
     <p>Статей пока нет</p>
   </ng-template>
-  <button type="button" (click)="onCreate()">Создать статью</button>
+  <button class="blog__create button" type="button" (click)="onCreate()">
+    Создать статью
+  </button>
   <app-article-create-modal
     *ngIf="createModalOpened"
     (createCanceledEvent)="onCreateCanceled()"

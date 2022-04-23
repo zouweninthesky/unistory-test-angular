@@ -1,6 +1,6 @@
 import { Component, Output, Input, EventEmitter } from '@angular/core';
 import { Router } from '@angular/router';
-import { ArticlesService } from '../services/articles-service/articles.service';
+import { ArticlesService } from '../../services/articles-service/articles.service';
 
 @Component({
   selector: 'app-delete-modal',

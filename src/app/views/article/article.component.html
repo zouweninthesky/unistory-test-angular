@@ -1,0 +1,13 @@
+<section class="article container">
+  <a class="button" routerLink="/">Назад</a>
+
+  <div *ngIf="article; else noArticle">
+    <h2>Запись "{{ article!.title }}"</h2>
+
+    <app-article-edit [article]="article"></app-article-edit>
+  </div>
+
+  <ng-template #noArticle>
+    <p>Такой статьи не существует</p>
+  </ng-template>
+</section>

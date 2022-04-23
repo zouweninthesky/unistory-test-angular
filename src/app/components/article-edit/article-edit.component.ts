@@ -2,7 +2,7 @@ import { Component, Input, OnInit } from '@angular/core';
 import { Article } from 'src/data/articles';
 import { Router } from '@angular/router';
 
-import { ArticlesService } from '../services/articles-service/articles.service';
+import { ArticlesService } from '../../services/articles-service/articles.service';
 
 @Component({
   selector: 'app-article-edit',
@@ -13,6 +13,7 @@ export class ArticleEditComponent implements OnInit {
   @Input() article: Article | undefined;
   title: string = '';
   content: string = '';
+  deleteModalOpened: boolean = false;
 
   constructor(
     private articlesService: ArticlesService,
@@ -32,5 +33,13 @@ export class ArticleEditComponent implements OnInit {
     );
 
     this.router.navigate(['/']);
+  }
+
+  onDelete() {
+    this.deleteModalOpened = true;
+  }
+
+  onDeleteCancel() {
+    this.deleteModalOpened = false;
   }
 }

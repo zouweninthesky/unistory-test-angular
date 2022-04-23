@@ -1,5 +1,5 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core';
-import { Article } from '../../data/articles';
+import { Article } from '../../../data/articles';
 
 @Component({
   selector: 'app-article-tile',

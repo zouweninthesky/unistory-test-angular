@@ -22,4 +22,15 @@
       margin-right: 0;
     }
   }
+
+  &__create {
+    position: fixed;
+
+    right: 40px;
+    bottom: 100px;
+
+    z-index: 10;
+
+    box-shadow: 0 0 10px 0px #ccc;
+  }
 }

@@ -1,0 +1,27 @@
+<div class="article-edit">
+  <div>
+    <div class="input">
+      <label for="title">Заголовок</label>
+      <input id="title" type="text" [(ngModel)]="title" />
+    </div>
+    <div class="input">
+      <label for="content">Описание</label>
+      <textarea
+        name=""
+        id="content"
+        cols="30"
+        rows="10"
+        [(ngModel)]="content"
+      ></textarea>
+    </div>
+    <div class="article-edit__button-wrapper">
+      <button class="button" type="button" (click)="onDelete()">Удалить</button>
+      <button class="button" type="button" (click)="onSave()">Сохранить</button>
+    </div>
+  </div>
+  <app-delete-modal
+    *ngIf="deleteModalOpened"
+    [id]="article!.id"
+    (deleteCanceledEvent)="onDeleteCancel()"
+  ></app-delete-modal>
+</div>
