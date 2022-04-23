@@ -1,27 +1,36 @@
-# UnistoryTestAngular
+# Тестовое задание для [Unistory](https://unistory.app/).
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.3.
+Первый опыт использования Angular.
 
-## Development server
+## Техническое задание
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Сверстать прототип сайта-блога на angular.
 
-## Code scaffolding
+### Страницы
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Список все записей, Карточка записи (также добавлена страница 404).
 
-## Build
+### Функционал
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+Добавление записи, удаление записи, редактирование записи.
 
-## Running unit tests
+### Использовать
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Роутинг, two-way binding, сервис для записей, angular-аттрибуты для обработки событий
 
-## Running end-to-end tests
+### Требования
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+Кнопка "добавить" должна быть "над" всеми элементами, размер записи статичен, контент записи должен обрезаться,\
+при удалении должно появляться окно подтверждения.
 
-## Further help
+### Не требуется
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Бэк, улучшение дизайна
+
+## Как установить
+
+Для установки вам понадобится [git](https://git-scm.com/downloads), [node.js](https://nodejs.org/en/) и [npm](https://www.npmjs.com/).\
+При наличии этих программ создайте в удобном для Вас месте папку и откройте её с помощью терминала ("Командная строка" в Windows).\ Находясь в этой папке, введите команду `git clone git@github.com:zouweninthesky/unistory-test-angular.git`.\
+Когда проект скачается, перейдите глубже, в папку проекта, и пропишите команду `npm i` для установки дополнительных программ, обеспечивающих работу проекта.\
+Когда установка завершится, пропишите `npm start`.\
+После этого откройте браузер и введите `http://localhost:4200/`, по этой ссылке Вам откроется это приложение.
